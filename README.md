@@ -53,30 +53,30 @@ function draw() {
 
 ### 描画するコマンド
 
-- ellipse()<br>
+- <strong>ellipse()</strong><br>
 円を描画するコマンド
 
-- rect()<br>
+- <strong>rect()</strong><br>
 矩形を描画するコマンド
 
-- line()<br>
+- <strong>line()</strong><br>
 線を描画するコマンド
 
 ### 描画モードを指定するコマンド
 
-- stroke(R, G, B, A), noStroke()<br>
+- <strong>stroke(R, G, B, A)</strong>, <strong>noStroke()</strong><br>
 線の色を指定するコマンド
 
-- strokeWeight()<br>
+- <strong>strokeWeight()</strong><br>
 線の太さを指定するコマンド
 
-- fill(R, G, B, A), nofill()<br>
+- <strong>fill(R, G, B, A)</strong>, <strong>nofill()</strong><br>
 塗りを指定するコマンド
 
-- background(R, G, B, A)<br>
+- <strong>background(R, G, B, A)<br>
 背景色を指定するコマンド
 
-- colorMode(RGB, A), colorMode(HSB, A)<br>
+- <strong>colorMode(RGB, A)</strong>, <strong>colorMode(HSB, A)<br>
 カラーモードを指定するコマンド
 
 ```
@@ -100,11 +100,11 @@ function draw() {
 
 ### 関数
 
-#### draw()
+- <strong>draw()</strong>
 一定時間毎に呼び出され、関数内のすべてのコマンドを実行する。<br>
 フレームレートは、frameCount()関数で指定する。初期値は、1秒60フレーム(fps)。
 
-#### setup()
+- <strong>setup()</strong>
 フレーム毎に繰り返し実行する必要のないコマンドを指定する。
 
 ```
@@ -119,7 +119,7 @@ function draw() {
 // => 1秒に1フレームを描画
 ```
 
-#### preload()
+- <strong>preload()</strong>
 プログラム開始時にデータをロードする。
 
 ```
@@ -130,17 +130,17 @@ function preload() {
 
 ### ディスプレイ領域とレンダラー
 
-- createCanvas()<br>
+- <strong>createCanvas()</strong><br>
 ディスプレイ領域を指定する。
 
-- createCanvas(0, 0, オプション)<br>
+- <strong>createCanvas(0, 0, オプション)</strong><br>
 オプションでレンダラーを指定する。<br>
 レンダラーは描画コマンドの結果をピクセルに落とし込む。
 
-- P2D<br>
+-- <strong>P2D</strong><br>
 標準のレンダラー
 
-- WEBGL<br>
+-- <strong>WEBGL</strong><br>
 3Dグラフィックを表示するためのレンダラー
 
 ```

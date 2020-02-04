@@ -4,10 +4,20 @@ This Repository is develop Generative Design with p5.js<br>
 Referenced by<br>
 <a href="http://www.bnn.co.jp/support/generativedesign_p5js/" target="_blank" rel="noopener">Generative Design</a>
 
-# インデックス
-- <a href="開発環境"></a>
+
+## インデックス
+- <a href="https://github.com/NakatsuboYusuke/dev-Generative-Design#%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">開発環境</a>
+- <a href="">要素</a>
+- <a href=""></a>
+
 
 ## 開発環境
+
+### CDN
+
+```
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+```
 
 ### デモ
 
@@ -28,7 +38,7 @@ function setup() {
   console.log('Hello');
 };
 
-// draw()関数は、描画ステップごとに呼び出され、関数内のすべてのコマンドを実行する。
+// draw()関数は、一定時間毎に呼び出され、関数内のすべてのコマンドを実行する。
 // ellipse => 描画するコマンド
 // mouseX => 中心点の初期値
 // mouseY => 中心点の初期値
@@ -37,4 +47,86 @@ function setup() {
 function draw() {
   ellipse(mouseX, mouseY, 40, 40);
 };
+```
+
+## 要素
+
+### 描画するコマンド
+
+#### ellipse()
+円を描画するコマンド
+
+#### rect()
+矩形を描画するコマンド
+
+#### line()
+線を描画するコマンド
+
+### 描画モードを指定するコマンド
+
+#### stroke(R, G, B, A), noStroke()
+線の色を指定するコマンド
+
+#### strokeWeight()
+線の太さを指定するコマンド
+
+#### fill(R, G, B, A), nofill()
+塗りを指定するコマンド
+
+#### background(R, G, B, A)
+背景色を指定するコマンド
+
+#### colorMode(RGB, A), colorMode(HSB, A)
+カラーモードを指定するコマンド
+
+- sketch.js
+
+```
+function setup() {
+  createCanvas(720, 720);
+  background(0, 255, 0, 255);
+  colorMode(RGB, 255);
+  stroke(255, 0, 0, 255);
+  // noStroke();
+  strokeWeight(2);
+  fill(0, 0, 255);
+  // noFill();
+};
+
+function draw() {
+  ellipse(50, 50, 50, 50);
+  rect(75, 75, 100, 50);
+  // line(50, 50, 80, 80);
+};
+```
+
+### 関数
+
+#### draw()
+一定時間毎に呼び出され、関数内のすべてのコマンドを実行する。<br>
+フレームレートは、frameCount()関数で指定する。<br>
+frameCountの初期値は、1秒60フレーム(fps)。
+
+#### setup()
+フレーム毎に繰り返し実行する必要のないコマンドを指定する。
+
+```
+function setup() {
+  frameRate(1);
+};
+
+function draw() {
+  console.log(frameCount);
+};
+
+// => 1秒に1フレームを描画
+```
+
+#### preload()
+プログラム開始時にデータをロードする。
+
+```
+function preload() {
+  img = loadImage('data/sample.jpg');
+}
 ```

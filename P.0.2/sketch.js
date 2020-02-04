@@ -26,3 +26,8 @@ function draw() {
 // function draw() {
 //   console.log(frameCount);
 // };
+
+// function setup() {
+//   createCanvas(0, 0, P2D);
+//   createCanvas(0, 0, WEBGL);
+// };

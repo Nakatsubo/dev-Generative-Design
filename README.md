@@ -79,8 +79,6 @@ function draw() {
 #### colorMode(RGB, A), colorMode(HSB, A)
 カラーモードを指定するコマンド
 
-- sketch.js
-
 ```
 function setup() {
   createCanvas(720, 720);
@@ -104,8 +102,7 @@ function draw() {
 
 #### draw()
 一定時間毎に呼び出され、関数内のすべてのコマンドを実行する。<br>
-フレームレートは、frameCount()関数で指定する。<br>
-frameCountの初期値は、1秒60フレーム(fps)。
+フレームレートは、frameCount()関数で指定する。初期値は、1秒60フレーム(fps)。
 
 #### setup()
 フレーム毎に繰り返し実行する必要のないコマンドを指定する。
@@ -129,4 +126,26 @@ function draw() {
 function preload() {
   img = loadImage('data/sample.jpg');
 }
+```
+
+### ディスプレイ領域とレンダラー
+
+#### createCanvas()
+ディスプレイ領域を指定する。
+
+#### createCanvas(0, 0, オプション)
+オプションでレンダラーを指定する。<br>
+レンダラーは描画コマンドの結果をピクセルに落とし込む。
+
+- P2D<br>
+標準のレンダラー
+
+- WEBGL<br>
+3Dグラフィックを表示するためのレンダラー
+
+```
+function setup() {
+  createCanvas(0, 0, P2D);
+  createCanvas(0, 0, WEBGL);
+};
 ```

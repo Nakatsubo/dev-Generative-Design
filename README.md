@@ -76,7 +76,7 @@ function draw() {
 - <strong>background(R, G, B, A)<br>
 背景色を指定するコマンド
 
-- <strong>colorMode(RGB, A)</strong>, <strong>colorMode(HSB, A)<br>
+- <strong>colorMode(RGB, A)</strong>, <strong>colorMode(HSB, A)</strong><br>
 カラーモードを指定するコマンド
 
 ```
@@ -137,10 +137,10 @@ function preload() {
 オプションでレンダラーを指定する。<br>
 レンダラーは描画コマンドの結果をピクセルに落とし込む。
 
--- <strong>P2D</strong><br>
+- <strong>P2D</strong><br>
 標準のレンダラー
 
--- <strong>WEBGL</strong><br>
+- <strong>WEBGL</strong><br>
 3Dグラフィックを表示するためのレンダラー
 
 ```

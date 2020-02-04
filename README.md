@@ -73,7 +73,7 @@ function draw() {
 - <strong>fill(R, G, B, A)</strong>, <strong>nofill()</strong><br>
 塗りを指定するコマンド
 
-- <strong>background(R, G, B, A)<br>
+- <strong>background(R, G, B, A)</strong><br>
 背景色を指定するコマンド
 
 - <strong>colorMode(RGB, A)</strong>, <strong>colorMode(HSB, A)</strong><br>

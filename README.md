@@ -53,30 +53,30 @@ function draw() {
 
 ### 描画するコマンド
 
-#### ellipse()
+- ellipse()<br>
 円を描画するコマンド
 
-#### rect()
+- rect()<br>
 矩形を描画するコマンド
 
-#### line()
+- line()<br>
 線を描画するコマンド
 
 ### 描画モードを指定するコマンド
 
-#### stroke(R, G, B, A), noStroke()
+- stroke(R, G, B, A), noStroke()<br>
 線の色を指定するコマンド
 
-#### strokeWeight()
+- strokeWeight()<br>
 線の太さを指定するコマンド
 
-#### fill(R, G, B, A), nofill()
+- fill(R, G, B, A), nofill()<br>
 塗りを指定するコマンド
 
-#### background(R, G, B, A)
+- background(R, G, B, A)<br>
 背景色を指定するコマンド
 
-#### colorMode(RGB, A), colorMode(HSB, A)
+- colorMode(RGB, A), colorMode(HSB, A)<br>
 カラーモードを指定するコマンド
 
 ```
@@ -130,10 +130,10 @@ function preload() {
 
 ### ディスプレイ領域とレンダラー
 
-#### createCanvas()
+- createCanvas()<br>
 ディスプレイ領域を指定する。
 
-#### createCanvas(0, 0, オプション)
+- createCanvas(0, 0, オプション)<br>
 オプションでレンダラーを指定する。<br>
 レンダラーは描画コマンドの結果をピクセルに落とし込む。
 

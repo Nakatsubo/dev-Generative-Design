@@ -100,11 +100,11 @@ function draw() {
 
 ### 関数
 
-- <strong>draw()</strong>
+- <strong>draw()</strong><br>
 一定時間毎に呼び出され、関数内のすべてのコマンドを実行する。<br>
 フレームレートは、frameCount()関数で指定する。初期値は、1秒60フレーム(fps)。
 
-- <strong>setup()</strong>
+- <strong>setup()</strong><br>
 フレーム毎に繰り返し実行する必要のないコマンドを指定する。
 
 ```
@@ -119,7 +119,7 @@ function draw() {
 // => 1秒に1フレームを描画
 ```
 
-- <strong>preload()</strong>
+- <strong>preload()</strong><br>
 プログラム開始時にデータをロードする。
 
 ```
@@ -130,10 +130,10 @@ function preload() {
 
 ### ディスプレイ領域とレンダラー
 
-- <strong>createCanvas()</strong><br>
+- <strong>createCanvas(X, Y)</strong><br>
 ディスプレイ領域を指定する。
 
-- <strong>createCanvas(0, 0, オプション)</strong><br>
+- <strong>createCanvas(X, Y, オプション)</strong><br>
 オプションでレンダラーを指定する。<br>
 レンダラーは描画コマンドの結果をピクセルに落とし込む。
 
@@ -145,7 +145,33 @@ function preload() {
 
 ```
 function setup() {
-  createCanvas(0, 0, P2D);
-  createCanvas(0, 0, WEBGL);
+  createCanvas(X, Y, P2D);
+  createCanvas(X, Y, WEBGL);
+};
+```
+
+### 座標変換
+
+- <strong>translate(X, Y, Z)</strong><br>
+座標系を移動するコマンド
+
+- <strong>rotate()</strong><br>
+回転するコマンド<br>
+p5.jsでは角度をラジアンで表し、回転方向は時計回り。
+
+- <strong>scale()</strong><br>
+拡大縮小するコマンド
+
+```
+function setup() {
+  createCanvas(720, 720);
+};
+
+function draw() {
+  translate(100, 100);
+  // 約45度回転
+  rotate(0.75);
+  scale(1.5);
+  rect(50, 50, 50, 50);
 };
 ```
